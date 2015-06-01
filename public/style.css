@@ -1,0 +1,14 @@
+img.avatar {
+  max-width: 100px;
+  border-style:solid;
+  display: inline;
+}
+
+h3 {
+  display: inline;
+}
+
+.info {
+  margin: 15px;
+  display: inline-block;
+}

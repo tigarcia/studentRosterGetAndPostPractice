@@ -1,0 +1,4 @@
+<% @students.each do |s| %>
+  <%= "<img class=\"avatar\" src=\"" + s[:avatar] + "\"><span class=\"info\"><h3>" + s[:name] + "</h3> - Hobbies: " + s[:hobby] + "</span><br>" %>
+<% end %>
+
