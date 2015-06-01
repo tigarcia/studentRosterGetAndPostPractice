@@ -40,12 +40,10 @@ post '/students' do
     student = JSON.parse(json)  
   end
 
-  puts params
-  
   if login.nil? or login != "g9fullstack"
      status 401
      "{\"error\": \"authentication not valid. The login cookie is missing or does not have the correct value\"}\n"
-  elsif not json.nil? and student.has_key? "name" and student.has_key? "hobby" and student.has_key? "avatar" #not name.nil? and not name.emtpy? and not hobby.nil? and not hobby.empty? and not avatar.nil? and not avatar.empty?
+  elsif not json.nil? and student.has_key? "name" and student.has_key? "hobby" and student.has_key? "avatar"
     create_student(student["name"], student["hobby"], student["avatar"])
     status 200
     "{\"success\":\"new student created\"}"
